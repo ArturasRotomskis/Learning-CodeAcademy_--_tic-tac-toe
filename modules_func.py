@@ -4,7 +4,7 @@ Basic Python praktinė užduotis [PTU4].
 Funkcinis programavimas su moduliais
 -------------------------------------
 """
-from modules.data import tic, tac, tip, draw, bye, smith_win, smith_choise
+from modules.data import tic, tac, tip, draw, bye, smith_win, smith_choise, s, smith_num, swap_s, swap_smith_num
 
 
 def toe():  # console frontend
@@ -28,23 +28,22 @@ def filter_tic(x_or_o, js):  # defined filter
     return False
 
 
-def main(i):
+def main(i):  # executions input
     tac[smith] = i
     toe()
 
 
-def main_draw():
+def main_draw():  # full gaming draw
     if tac[1] != " " and tac[2] != " " and tac[3] != " " and tac[4] != " " and tac[5] != " " and tac[6] != " " \
             and tac[7] != " " and tac[8] != " " and tac[9] != " ":
-        print("real" + draw)
+        print("real (full)" + draw)
 
 
 while True:
     # ---- trigger flow mode - ###############################
-    j = "X"
-    smith = int(input(tip + smith_choise[1]))
-    main(j)
-    if filter_tic(j, smith_win[1]):
+    smith = int(input(tip + smith_choise[smith_num]))
+    main(s)
+    if filter_tic(s, smith_win[smith_num]):
         break
     if 0 == smith:
         print(draw)
@@ -53,16 +52,5 @@ while True:
         print(bye)
         break
     main_draw()
-    # - separated player ---- ################################
-    j = "O"
-    smith = int(input(tip + smith_choise[1+1]))
-    main(j)
-    if filter_tic(j, smith_win[1+1]):
-        break
-    if 0 == smith:
-        print(draw)
-        tac = [" " for i in tac]
-    if 10 == smith:
-        print(bye)
-        break
-    main_draw()
+    (smith_num, swap_smith_num) = (swap_smith_num, smith_num)
+    (s, swap_s) = (swap_s, s)
