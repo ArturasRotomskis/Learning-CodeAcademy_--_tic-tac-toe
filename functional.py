@@ -15,11 +15,9 @@ bye = "\n- Good bye ----"
 #######################################################################################################################
 tic = ([1, 2, 3], [4, 5, 6], [7, 8, 9], [1, 4, 7], [2, 5, 8], [3, 6, 9], [1, 5, 9], [3, 5, 7])
 tac = [" " for t in range(11)]
-# -- triggers variables
-smith_num = 1
-s = "X"
-swap_smith_num = 2
-swap_s = "O"
+# -- triggers variables - ####################################
+smith_num = 1; swap_smith_num = 2
+s = "X"; swap_s = "O"
 
 
 def toe():  # console frontend
@@ -38,24 +36,22 @@ def main(i):  # executions input
 
 
 def filter_tic(x_or_o, j_win):  # defined filter
-    i = 0
-    while i < 8:
+    for i in range(0, 8):
         win = list(tic[i])
         if tac[win[0]] == tac[win[1]] == tac[win[2]] == x_or_o:
             print(j_win)
             return True
-        i += 1
     return False
 
 
 def main_draw():  # full gaming draw
-    if tac[1] != " " and tac[2] != " " and tac[3] != " " and tac[4] != " " and tac[5] != " " and tac[6] != " " \
-            and tac[7] != " " and tac[8] != " " and tac[9] != " ":
-        print("real (full)" + draw)
+    tac[0], tac[10] = ".", "."
+    if " " in tac: pass
+    else: print("real (full)" + draw)
 
 
 while True:
-    # ---- trigger flow mode - ###############################
+    # ---- trigger flow mode - ##############################
     smith = int(input(tip + smith_choise[smith_num]))
     main(s)
     if filter_tic(s, smith_win[smith_num]):
@@ -67,5 +63,5 @@ while True:
         print(bye)
         break
     main_draw()
-    (smith_num, swap_smith_num) = (swap_smith_num, smith_num)
     (s, swap_s) = (swap_s, s)
+    (smith_num, swap_smith_num) = (swap_smith_num, smith_num)
