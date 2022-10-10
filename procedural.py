@@ -61,7 +61,7 @@ while True:  # Leidžiamas ciklas per šabloną
         break
     if tac[1] != " " and tac[2] != " " and tac[3] != " " and tac[4] != " " and tac[5] != " " and tac[6] != " " \
             and tac[7] != " " and tac[8] != " " and tac[9] != " ":  # pilnos lygiosios
-        print("\n --Lygiosios-- - paspauskit (0) ir žaiskite iš naujo:\n")
+        print("\n -- Baigtos lygiosios-- - paspauskit (0) ir žaiskite iš naujo:\n")
 # tas pats kodas paleidžiamas oponentui
     jane = int(input(
         "Žaisdami naudokitės klavišais (1-9), "
@@ -102,4 +102,6 @@ while True:  # Leidžiamas ciklas per šabloną
         break
     if tac[1] != " " and tac[2] != " " and tac[3] != " " and tac[4] != " " and tac[5] != " " and tac[6] != " " \
             and tac[7] != " " and tac[8] != " " and tac[9] != " ":
-        print("\n --Lygiosios-- - paspauskit (0) ir žaiskite iš naujo:\n")
+        print("\n -- Baigtos lygiosios-- - paspauskit (0) ir žaiskite iš naujo:\n")
+        tic = [" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " "]
+        tac = tic

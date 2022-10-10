@@ -1,11 +1,23 @@
+from modules.data import tac, tip, draw, bye, s, smith_num, smith_win, smith_choise, swap_s, swap_smith_num, \
+    filter_tic, main_draw
+
 """
 -------------------------------------
 Basic Python praktinė užduotis [PTU4].
 Funkcinis programavimas su moduliais
 -------------------------------------
 """
-from modules.data import tac, toe, tip, draw, bye, filter_tic, main_draw, \
-                         smith_win, smith_choise, smith_num, swap_smith_num, s, swap_s
+
+
+def toe():  # console frontend
+    print()
+    print("", tac[7], "|", tac[8], "|", tac[9])
+    print("---|---|---")
+    print("", tac[4], "|", tac[5], "|", tac[6])
+    print("---|---|---")
+    print("", tac[1], "|", tac[2], "|", tac[3], "")
+    print()
+
 
 while True:
     # ---- trigger flow mode - ###############################
