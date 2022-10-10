@@ -19,7 +19,6 @@ while True:
         break
     if 0 == smith:
         print(draw)
-        tac = [" " for i in tac]
     if 10 == smith:
         print(bye)
         break
