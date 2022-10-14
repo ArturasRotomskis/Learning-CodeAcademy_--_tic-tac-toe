@@ -63,5 +63,5 @@ while True:
         print(bye)
         break
     main_draw()
-    (x, o) = (o, x)
+    (x, o) = (o, x)  ################## -swaping gamers ----- #
     (x_num, o_num) = (o_num, x_num)
