@@ -7,7 +7,7 @@ Funkcinis programavimas.
 #######################################################################################################################
 smiths = ["", "John Smith", "Jane Smith"]
 x_win = ("", (smiths[1] + " *** WINS ***"), (smiths[2] + " *** WINS ***"))
-x_choise = ("", (smiths[1] + " (X): "), (smiths[2] + " (O): "))
+x_choice = ("", (smiths[1] + " (X): "), (smiths[2] + " (O): "))
 tip = "Use the keyboard (1-9) to play, to declare a draw and play again press (0), " \
       "needed turn off choose (10)\n -- "
 draw = "\n -- a Draw -- - play again:\n"
@@ -52,7 +52,7 @@ def main_draw():  # full gaming draw
 
 while True:
     # ---- trigger flow mode - ################################
-    smith = int(input(tip + x_choise[x_num]))
+    smith = int(input(tip + x_choice[x_num]))
     main(x)
     if filter_tic(x, x_win[x_num]):
         break
@@ -63,5 +63,5 @@ while True:
         print(bye)
         break
     main_draw()
-    (x, o) = (o, x)  ################## -swaping gamers ----- #
+    (x, o) = (o, x)  ################## -swapping gamers ----- #
     (x_num, o_num) = (o_num, x_num)
