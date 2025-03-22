@@ -65,5 +65,3 @@ while True:
     main_draw()
     (x, o) = (o, x)  # ---- swapping gamers - ################
     (x_num, o_num) = (o_num, x_num)
-
-k;lk;
