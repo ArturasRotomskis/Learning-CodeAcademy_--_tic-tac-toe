@@ -9,13 +9,13 @@ smiths = ["", "John Smith", "Jane Smith"]
 x_win = ("", (smiths[1] + " *** WINS ***"), (smiths[2] + " *** WINS ***"))
 x_choice = ("", (smiths[1] + " (X): "), (smiths[2] + " (O): "))
 tip = "Use the keyboard (1-9) to play, to declare a draw and play again press (0), " \
-      "needed turn off choose (10)\n -- "
+      "needed turn off, choose (10)\n -- "
 draw = "\n -- a Draw -- - play again:\n"
 bye = "\n- Good bye ----"
 #######################################################################################################################
 tic = ([1, 2, 3], [4, 5, 6], [7, 8, 9], [1, 4, 7], [2, 5, 8], [3, 6, 9], [1, 5, 9], [3, 5, 7])
 tac = [" " for t in range(11)]
-# -- triggers variables - ######################################
+# -- triggers variables - ####################################
 x_num = 1; o_num = 2
 x = "X"; o = "O"
 
@@ -51,7 +51,7 @@ def main_draw():  # full gaming draw
 
 
 while True:
-    # ---- trigger flow mode - ################################
+    # ---- trigger flow mode - ##############################
     smith = int(input(tip + x_choice[x_num]))
     main(x)
     if filter_tic(x, x_win[x_num]):
@@ -63,5 +63,7 @@ while True:
         print(bye)
         break
     main_draw()
-    (x, o) = (o, x)  ################## -swapping gamers ----- #
+    (x, o) = (o, x)  # ---- swapping gamers - ################
     (x_num, o_num) = (o_num, x_num)
+
+k;lk;
